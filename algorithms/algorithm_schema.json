@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AlgorithmMetadata",
+  "type": "object",
+  "required": [
+    "slug",
+    "title",
+    "category",
+    "difficulty",
+    "shortDescription",
+    "timeComplexity",
+    "spaceComplexity",
+    "languages",
+    "visualization",
+    "benchmark",
+    "relatedAlgorithms"
+  ],
+  "properties": {
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "title": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "difficulty": {
+      "enum": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ]
+    },
+    "shortDescription": {
+      "type": "string"
+    },
+    "timeComplexity": {
+      "type": "string"
+    },
+    "spaceComplexity": {
+      "type": "string"
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "cpp",
+          "python"
+        ]
+      },
+      "minItems": 2,
+      "uniqueItems": true
+    },
+    "visualization": {
+      "type": "boolean"
+    },
+    "benchmark": {
+      "type": "boolean"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "relatedAlgorithms": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

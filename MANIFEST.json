@@ -1,0 +1,248 @@
+{
+  "package": "CP_LAB_CODEX_HANDOFF_V1",
+  "version": "1.0",
+  "fileCount": 48,
+  "files": [
+    {
+      "path": "00_START_HERE.md",
+      "bytes": 2093,
+      "sha256": "f2df6e2c9854b40b02211471dc0812f2d01129289fd17b29b20b1a09ac5cb8c1"
+    },
+    {
+      "path": "01_PRODUCT_VISION.md",
+      "bytes": 1729,
+      "sha256": "730fa15dcad0fcfd1985047c7f990353eea01b0f531e00f74d654daccbf8dcfa"
+    },
+    {
+      "path": "02_V1_SCOPE.md",
+      "bytes": 1006,
+      "sha256": "a6aa91371d8da8e523aee949bac6bbb56772259835bb569cc67799f78fdc59c4"
+    },
+    {
+      "path": "03_INFORMATION_ARCHITECTURE.md",
+      "bytes": 940,
+      "sha256": "c48dcb83cfd6707cb014c2535c2694905091f0f9c8d53192c15b574f0f84ad9b"
+    },
+    {
+      "path": "04_PAGE_SPECIFICATIONS.md",
+      "bytes": 4071,
+      "sha256": "6a2c3a26ed977b28cebdb1850c309cdba4830409d932f61c060220f22bc22647"
+    },
+    {
+      "path": "05_UI_UX_SPEC.md",
+      "bytes": 1510,
+      "sha256": "d3a5e0dae40ed328285ef7579bcf71d7114ca2465840a82621204a63a912fefb"
+    },
+    {
+      "path": "06_DESIGN_SYSTEM.md",
+      "bytes": 1010,
+      "sha256": "2bd39130727df4cd4ed9cfc4bb03ab2b74c5fb51f46b4c6258070244f5ef482a"
+    },
+    {
+      "path": "07_COMPONENT_SPEC.md",
+      "bytes": 1010,
+      "sha256": "f61aaa819d22ab9ac9dc33956449b5ec9f62585e42c2e752587316fb8909b4fb"
+    },
+    {
+      "path": "08_VISUALIZATION_ENGINE.md",
+      "bytes": 1594,
+      "sha256": "7e7e9d55c5bc319a34d0fb9d5a623c7c1782116fdce618df00d5c583bef24453"
+    },
+    {
+      "path": "09_ALGORITHM_SPEC.md",
+      "bytes": 1453,
+      "sha256": "4ca49b86a5215251b674f6fa1a6f426eb6fe3bdd22f3cc378a533e3035bafdb8"
+    },
+    {
+      "path": "10_BENCHMARK_SPEC.md",
+      "bytes": 1713,
+      "sha256": "8b3ffd8ffc062c0280b42220898e4ba3ecb2bc412acfd1f7eddcf05223de51ac"
+    },
+    {
+      "path": "11_BACKEND_SPEC.md",
+      "bytes": 964,
+      "sha256": "9b0564455201b65cb9c181738544e1103ac5c4cd9fb63bdf2a8a9da4b509c9b5"
+    },
+    {
+      "path": "12_FRONTEND_SPEC.md",
+      "bytes": 1052,
+      "sha256": "c9c151bc5e32ececdd70d896716493f0b7f67b5251c1d7bbe845c053692bf636"
+    },
+    {
+      "path": "13_API_SPEC.md",
+      "bytes": 1112,
+      "sha256": "b6a92ed5180a3387941d2511f2533e0a590bb24a52b06c99510b4a84147a5fec"
+    },
+    {
+      "path": "14_TESTING_SPEC.md",
+      "bytes": 1251,
+      "sha256": "9e5c955bdaefcdc22daae76b531ffa688df3873d97ff5120a001b0cc67f54042"
+    },
+    {
+      "path": "15_SECURITY_SPEC.md",
+      "bytes": 836,
+      "sha256": "d9ffa1a5c7b25a3e05effe88dcfb24525fb5df7719c621084d1ff13cc1f7c36e"
+    },
+    {
+      "path": "16_GITHUB_SPEC.md",
+      "bytes": 1146,
+      "sha256": "4f7129e213781bfa6092dc1a4ad9006484d7ba769f97a6389031d7461b0c275f"
+    },
+    {
+      "path": "17_DOCUMENTATION_SPEC.md",
+      "bytes": 762,
+      "sha256": "9a35d7fb0e65036566143cff980a12a296c6113b06b40cea62565b2e5317d6e1"
+    },
+    {
+      "path": "18_PROMOTION_SPEC.md",
+      "bytes": 821,
+      "sha256": "4867a702c930fa6672027044734e2bcd6eeedeac3b83380b86bd4ecf94a87a61"
+    },
+    {
+      "path": "19_ROADMAP.md",
+      "bytes": 923,
+      "sha256": "e2d720f8112047bc2671b2216b6d39a7d52a8fb4682dbf631186367e21a14c61"
+    },
+    {
+      "path": "20_ACCEPTANCE_CRITERIA.md",
+      "bytes": 1700,
+      "sha256": "b75808aba97806fbd524db7bebc934477786a9d5befe5d2d7534d92f1f69460d"
+    },
+    {
+      "path": "README.md",
+      "bytes": 973,
+      "sha256": "56816c2eacf9a21ddd55b5dfbde20349084501801bc46490d45d7b3850fccb51"
+    },
+    {
+      "path": "algorithms/V1_ALGORITHMS.md",
+      "bytes": 1451,
+      "sha256": "4e15748a567298be95bbccd5c93dd0f307b1b5a48edc16036887eef1f3928cb3"
+    },
+    {
+      "path": "algorithms/algorithm_schema.json",
+      "bytes": 1338,
+      "sha256": "3973d5bd744681422fb91da8c7264dbbd43f058a7ff557ec232d46d179fba4d5"
+    },
+    {
+      "path": "algorithms/visualization_step_schema.json",
+      "bytes": 873,
+      "sha256": "385089c8d6310ac9494aa0ba9e3e9c955637d22036914840490611ca6db77cce"
+    },
+    {
+      "path": "design/ANIMATION_RULES.md",
+      "bytes": 317,
+      "sha256": "2032f4ffb1d12318049c6ca20328a6877eb45704e375778efcbdda1593136d35"
+    },
+    {
+      "path": "design/COMPONENT_LIBRARY.md",
+      "bytes": 425,
+      "sha256": "fe48e6ed0dfbd0894dd6805d33d1767be3dcb76dea431dbb39034c301ab91c75"
+    },
+    {
+      "path": "design/DESIGN_TOKENS.md",
+      "bytes": 517,
+      "sha256": "34d0100754347539063489c74e4f3983882d54b3dddc1ef914fb840b72659a80"
+    },
+    {
+      "path": "design/RESPONSIVE_RULES.md",
+      "bytes": 516,
+      "sha256": "e9c9972db24916241e7db9cb37a467a5e74814772cba0de3352df4793c008e43"
+    },
+    {
+      "path": "mock_data/algorithms.json",
+      "bytes": 4385,
+      "sha256": "a345931b6d49a5f2b4c2638fb2dbca5080a9327734ad09cf2c10f61f938851a0"
+    },
+    {
+      "path": "mock_data/benchmarks.json",
+      "bytes": 518,
+      "sha256": "e0bdd7b86d0d9affdb64afc5f184ed5b5ca5b368bfa3ba97461083f9d977905c"
+    },
+    {
+      "path": "mock_data/dashboard.json",
+      "bytes": 333,
+      "sha256": "bc3fdcf5d149fc886bc786f4f27ffbba671ea786342dba25dc41ac98c71650b6"
+    },
+    {
+      "path": "prompts/CODEX_MASTER_PROMPT.md",
+      "bytes": 3206,
+      "sha256": "ddb19d8c42cc687c4c2a01dc113afc6eb4db1b6afe1fb493d27194cec4db701d"
+    },
+    {
+      "path": "prompts/PHASE_01_SCAFFOLD.md",
+      "bytes": 519,
+      "sha256": "7497f89168d507480b4ffa0a624ba2f756a723e5b7aa1a2fc30dc5ebff1d4204"
+    },
+    {
+      "path": "prompts/PHASE_02_DESIGN.md",
+      "bytes": 318,
+      "sha256": "18f521b2e5eb174ed85105837e06f660eb571794d4046f6a42a6ce8d861db52d"
+    },
+    {
+      "path": "prompts/PHASE_03_FRONTEND.md",
+      "bytes": 261,
+      "sha256": "c203600198554de119eeb39a37d878846ff85ec9f55651105639656bc9a84815"
+    },
+    {
+      "path": "prompts/PHASE_04_BACKEND.md",
+      "bytes": 258,
+      "sha256": "b7507077ad8bcccc74b56ccbd4ec6b024feab1aabfdd3d57af8be93e80807332"
+    },
+    {
+      "path": "prompts/PHASE_05_ALGORITHMS.md",
+      "bytes": 291,
+      "sha256": "3bb12e64b6687065a6f3800d0808e66e6faca529677a1513d667109eb16c092a"
+    },
+    {
+      "path": "prompts/PHASE_06_VISUALIZATION.md",
+      "bytes": 374,
+      "sha256": "8bdc3c5c1150cf11c017eb4a3b441c1554d2f52fb971c234ee8bc2153c75ba3a"
+    },
+    {
+      "path": "prompts/PHASE_07_BENCHMARK.md",
+      "bytes": 293,
+      "sha256": "db71c2916aedf95191f007af043a0e73a66b02674c8d097d8165db81cfd1ec57"
+    },
+    {
+      "path": "prompts/PHASE_08_TESTING.md",
+      "bytes": 276,
+      "sha256": "0b27ec549bfc5a7bb83d768caa3b9ed4fac6d92f6b579ff8d6e2789eeb654cb4"
+    },
+    {
+      "path": "prompts/PHASE_09_FINAL_QA.md",
+      "bytes": 410,
+      "sha256": "dc2cfe7f12bb15a27306e4b28c05445de3785070fed32bcb4454dc2fd3a911a1"
+    },
+    {
+      "path": "visual_reference/VISUAL_REFERENCE_GUIDE.md",
+      "bytes": 1572,
+      "sha256": "1cf554f4e0da1a6d4a0b5b9df87cf2b5d5fab07956b60fc62a67cb94f0c822d0"
+    },
+    {
+      "path": "visual_reference/ui_reference_01.jpg",
+      "bytes": 143535,
+      "sha256": "a21c5eee1a61e2ac74ee07cbc29b5dec51cc9062acca97c3a291bd4acb4ace7d"
+    },
+    {
+      "path": "visual_reference/ui_reference_02.jpg",
+      "bytes": 109510,
+      "sha256": "d0130c4dfc085d1ac4ba2d1b4c1b7edcb860f1b95f43ae585f4154fbe8cd0169"
+    },
+    {
+      "path": "visual_reference/ui_reference_03.jpg",
+      "bytes": 115424,
+      "sha256": "eef06f61e6402dd02f7782924ab5c64eadaa3423d365d8febadd7c4d31ccaeca"
+    },
+    {
+      "path": "visual_reference/ui_reference_04.jpg",
+      "bytes": 124599,
+      "sha256": "e688a52e42d6044d54e3c5c0ed1ae5385c9b30bdb0ec7442f99a8bb0d7577390"
+    },
+    {
+      "path": "visual_reference/ui_reference_05.jpg",
+      "bytes": 123245,
+      "sha256": "2808eb566cb9204a8d24ce4a1ad948e3760078592593a938b1e0768251aa4fc9"
+    }
+  ],
+  "note": "MANIFEST.json intentionally does not hash itself."
+}

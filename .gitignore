@@ -1,0 +1,17 @@
+node_modules/
+.next/
+playwright-report/
+test-results/
+__pycache__/
+.pytest_cache/
+.hypothesis/
+*.py[cod]
+*.db
+*.sqlite3
+build/
+dist/
+.venv/
+.env
+visual_reference/
+coverage/
+apps/github项目库/

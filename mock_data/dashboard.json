@@ -1,0 +1,20 @@
+{
+  "stats": {
+    "algorithms": 20,
+    "languages": 2,
+    "visualizations": 20,
+    "benchmarkSuites": 8
+  },
+  "featuredAlgorithms": [
+    "dijkstra",
+    "euler-linear-sieve",
+    "segment-tree",
+    "binary-exponentiation"
+  ],
+  "categories": [
+    "Number Theory",
+    "Graph",
+    "Data Structures",
+    "Fundamental"
+  ]
+}

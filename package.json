@@ -1,0 +1,21 @@
+{
+  "name": "cp-lab",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": ["apps/web"],
+  "scripts": {
+    "dev": "npm --workspace apps/web run dev",
+    "dev:web": "npm --workspace apps/web run dev",
+    "dev:api": "node scripts/python.mjs -m uvicorn apps.api.main:app --reload --port 8000",
+    "lint": "npm --workspace apps/web run lint",
+    "typecheck": "npm --workspace apps/web run typecheck",
+    "test": "npm run test:web && npm run test:api && npm run test:algorithms",
+    "test:web": "npm --workspace apps/web run test",
+    "test:api": "node scripts/python.mjs -m pytest apps/api/tests -q",
+    "test:algorithms": "node scripts/python.mjs -m pytest algorithms/python/tests -q && node scripts/python.mjs scripts/test_cpp.py",
+    "test:e2e": "npm --workspace apps/web run test:e2e",
+    "build": "npm --workspace apps/web run build",
+    "check": "npm run lint && npm run typecheck && npm run test && npm run build"
+  },
+  "engines": { "node": ">=20", "python": ">=3.11" }
+}

@@ -1,0 +1,35 @@
+name: CI
+on:
+  push:
+  pull_request:
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: npm ci
+      - run: pip install -r apps/api/requirements.txt
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run test:web
+      - run: python -m pytest apps/api/tests -q
+      - run: python -m pytest algorithms/python/tests -q
+      - run: python scripts/test_cpp.py
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+        working-directory: apps/web
+      - run: npm run test:e2e
+
+  docker-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-buildx-action@v3
+      - name: Validate Compose configuration
+        run: docker compose config --quiet
+      - name: Build production images
+        run: docker compose build

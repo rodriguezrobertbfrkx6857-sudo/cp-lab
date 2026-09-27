@@ -1,0 +1,28 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    environment:
+      CP_LAB_DATABASE_URL: sqlite:////data/cp_lab.db
+      CP_LAB_CORS_ORIGINS: http://localhost:3000
+    ports: ["8000:8000"]
+    volumes: ["cp_lab_data:/data"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8000
+      INTERNAL_API_URL: http://api:8000
+    ports: ["3000:3000"]
+    depends_on:
+      api:
+        condition: service_healthy
+volumes:
+  cp_lab_data:

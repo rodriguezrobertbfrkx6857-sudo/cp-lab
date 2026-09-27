@@ -1,0 +1,24 @@
+{
+  "note": "Configuration examples only. Do not use these as fabricated measured results.",
+  "default": {
+    "seed": 42,
+    "warmupRuns": 3,
+    "measuredRuns": 10,
+    "inputSizes": [
+      1000,
+      10000,
+      100000,
+      1000000
+    ]
+  },
+  "suites": [
+    "naive-gcd-vs-euclidean",
+    "naive-power-vs-binary-exponentiation",
+    "trial-prime-vs-sieve",
+    "eratosthenes-vs-euler-sieve",
+    "bfs-vs-dfs",
+    "dsu-path-compression",
+    "fenwick-vs-naive-prefix",
+    "merge-sort-vs-quick-sort"
+  ]
+}

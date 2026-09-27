@@ -1,0 +1,182 @@
+[
+  {
+    "slug": "euclidean-gcd",
+    "title": "Euclidean GCD",
+    "category": "Number Theory",
+    "difficulty": "Beginner",
+    "timeComplexity": "O(log min(a,b))",
+    "visualization": true,
+    "benchmark": true
+  },
+  {
+    "slug": "extended-gcd",
+    "title": "Extended GCD",
+    "category": "Number Theory",
+    "difficulty": "Intermediate",
+    "timeComplexity": "O(log min(a,b))",
+    "visualization": true,
+    "benchmark": false
+  },
+  {
+    "slug": "binary-exponentiation",
+    "title": "Binary Exponentiation",
+    "category": "Number Theory",
+    "difficulty": "Beginner",
+    "timeComplexity": "O(log n)",
+    "visualization": true,
+    "benchmark": true
+  },
+  {
+    "slug": "modular-inverse",
+    "title": "Modular Inverse",
+    "category": "Number Theory",
+    "difficulty": "Intermediate",
+    "timeComplexity": "Depends on method",
+    "visualization": true,
+    "benchmark": false
+  },
+  {
+    "slug": "prime-factorization",
+    "title": "Prime Factorization",
+    "category": "Number Theory",
+    "difficulty": "Beginner",
+    "timeComplexity": "O(sqrt(n))",
+    "visualization": true,
+    "benchmark": true
+  },
+  {
+    "slug": "eratosthenes-sieve",
+    "title": "Eratosthenes Sieve",
+    "category": "Number Theory",
+    "difficulty": "Beginner",
+    "timeComplexity": "O(n log log n)",
+    "visualization": true,
+    "benchmark": true
+  },
+  {
+    "slug": "euler-linear-sieve",
+    "title": "Euler Linear Sieve",
+    "category": "Number Theory",
+    "difficulty": "Intermediate",
+    "timeComplexity": "O(n)",
+    "visualization": true,
+    "benchmark": true
+  },
+  {
+    "slug": "euler-phi",
+    "title": "Euler Phi",
+    "category": "Number Theory",
+    "difficulty": "Intermediate",
+    "timeComplexity": "O(sqrt(n))",
+    "visualization": true,
+    "benchmark": true
+  },
+  {
+    "slug": "combination",
+    "title": "Combination C(n,k)",
+    "category": "Number Theory",
+    "difficulty": "Intermediate",
+    "timeComplexity": "Depends on method",
+    "visualization": true,
+    "benchmark": false
+  },
+  {
+    "slug": "crt",
+    "title": "Chinese Remainder Theorem",
+    "category": "Number Theory",
+    "difficulty": "Advanced",
+    "timeComplexity": "O(k log M)",
+    "visualization": true,
+    "benchmark": false
+  },
+  {
+    "slug": "bfs",
+    "title": "Breadth-First Search",
+    "category": "Graph",
+    "difficulty": "Beginner",
+    "timeComplexity": "O(V+E)",
+    "visualization": true,
+    "benchmark": true
+  },
+  {
+    "slug": "dfs",
+    "title": "Depth-First Search",
+    "category": "Graph",
+    "difficulty": "Beginner",
+    "timeComplexity": "O(V+E)",
+    "visualization": true,
+    "benchmark": true
+  },
+  {
+    "slug": "dijkstra",
+    "title": "Dijkstra",
+    "category": "Graph",
+    "difficulty": "Intermediate",
+    "timeComplexity": "O((V+E) log V)",
+    "visualization": true,
+    "benchmark": true
+  },
+  {
+    "slug": "topological-sort",
+    "title": "Topological Sort",
+    "category": "Graph",
+    "difficulty": "Intermediate",
+    "timeComplexity": "O(V+E)",
+    "visualization": true,
+    "benchmark": false
+  },
+  {
+    "slug": "dsu",
+    "title": "Disjoint Set Union",
+    "category": "Data Structures",
+    "difficulty": "Intermediate",
+    "timeComplexity": "~O(alpha(n)) amortized",
+    "visualization": true,
+    "benchmark": true
+  },
+  {
+    "slug": "fenwick-tree",
+    "title": "Fenwick Tree",
+    "category": "Data Structures",
+    "difficulty": "Intermediate",
+    "timeComplexity": "O(log n)",
+    "visualization": true,
+    "benchmark": true
+  },
+  {
+    "slug": "segment-tree",
+    "title": "Segment Tree",
+    "category": "Data Structures",
+    "difficulty": "Advanced",
+    "timeComplexity": "O(log n) query/update",
+    "visualization": true,
+    "benchmark": true
+  },
+  {
+    "slug": "binary-search",
+    "title": "Binary Search",
+    "category": "Fundamental",
+    "difficulty": "Beginner",
+    "timeComplexity": "O(log n)",
+    "visualization": true,
+    "benchmark": true
+  },
+  {
+    "slug": "merge-sort",
+    "title": "Merge Sort",
+    "category": "Fundamental",
+    "difficulty": "Beginner",
+    "timeComplexity": "O(n log n)",
+    "visualization": true,
+    "benchmark": true
+  },
+  {
+    "slug": "quick-sort",
+    "title": "Quick Sort",
+    "category": "Fundamental",
+    "difficulty": "Beginner",
+    "timeComplexity": "O(n log n) average",
+    "visualization": true,
+    "benchmark": true
+  }
+]

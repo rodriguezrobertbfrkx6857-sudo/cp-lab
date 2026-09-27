@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VisualizationStep",
+  "type": "object",
+  "required": [
+    "index",
+    "type",
+    "description"
+  ],
+  "properties": {
+    "index": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "type": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "highlightedLines": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 1
+      }
+    },
+    "variables": {
+      "type": "object"
+    },
+    "arrayState": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "graphState": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "treeState": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "metadata": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}

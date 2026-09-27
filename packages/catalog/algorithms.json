@@ -1,0 +1,162 @@
+[
+  {
+    "slug": "euclidean-gcd", "title": "Euclidean GCD", "category": "Number Theory", "difficulty": "Beginner",
+    "shortDescription": "Find the greatest common divisor by repeatedly replacing a pair with its remainder.",
+    "intuition": "A common divisor of a and b also divides a mod b, so the problem shrinks without changing the answer.",
+    "derivation": "Because a = qb + r, the common divisors of (a,b) are exactly the common divisors of (b,r). Repeating ends at gcd(g,0)=|g|.",
+    "timeComplexity": "O(log min(a,b))", "spaceComplexity": "O(1)", "languages": ["cpp", "python"], "visualization": true, "benchmark": true,
+    "tags": ["gcd", "division", "number theory"], "exampleInput": "48 18", "exampleOutput": "6", "edgeCases": ["Both values may be zero", "Negative values are normalized"], "relatedAlgorithms": ["extended-gcd", "modular-inverse"]
+  },
+  {
+    "slug": "extended-gcd", "title": "Extended GCD", "category": "Number Theory", "difficulty": "Intermediate",
+    "shortDescription": "Compute gcd(a,b) together with coefficients x and y satisfying ax + by = gcd(a,b).",
+    "intuition": "Track how every remainder is formed from the original pair while Euclid reduces the numbers.",
+    "derivation": "Back-substitution through Euclid's equations expresses the final non-zero remainder as a linear combination of a and b.",
+    "timeComplexity": "O(log min(a,b))", "spaceComplexity": "O(log min(a,b))", "languages": ["cpp", "python"], "visualization": true, "benchmark": false,
+    "tags": ["bezout", "gcd", "diophantine"], "exampleInput": "30 18", "exampleOutput": "gcd=6, x=-1, y=2", "edgeCases": ["Signs affect coefficients", "The pair (0,0) has non-unique coefficients"], "relatedAlgorithms": ["euclidean-gcd", "modular-inverse", "crt"]
+  },
+  {
+    "slug": "binary-exponentiation", "title": "Binary Exponentiation", "category": "Number Theory", "difficulty": "Beginner",
+    "shortDescription": "Raise a base to a non-negative power using the binary digits of the exponent.",
+    "intuition": "Each bit says whether the current squared power contributes to the answer.",
+    "derivation": "Write n in binary. Successive squaring produces a^(1), a^(2), a^(4), and multiplying selected terms reconstructs a^n.",
+    "timeComplexity": "O(log n)", "spaceComplexity": "O(1)", "languages": ["cpp", "python"], "visualization": true, "benchmark": true,
+    "tags": ["power", "modular arithmetic", "bits"], "exampleInput": "3 13 100", "exampleOutput": "23", "edgeCases": ["Exponent zero returns 1 modulo m", "Modulus must be positive"], "relatedAlgorithms": ["modular-inverse", "combination"]
+  },
+  {
+    "slug": "modular-inverse", "title": "Modular Inverse", "category": "Number Theory", "difficulty": "Intermediate",
+    "shortDescription": "Find x such that ax ≡ 1 (mod m) using the extended Euclidean algorithm.",
+    "intuition": "An inverse exists precisely when a and m are coprime.",
+    "derivation": "Bézout gives ax + my = 1 when gcd(a,m)=1; reducing the equation modulo m leaves ax ≡ 1.",
+    "timeComplexity": "O(log m)", "spaceComplexity": "O(log m)", "languages": ["cpp", "python"], "visualization": true, "benchmark": false,
+    "tags": ["inverse", "modulo", "bezout"], "exampleInput": "3 11", "exampleOutput": "4", "edgeCases": ["No inverse when gcd(a,m) ≠ 1", "Modulus must exceed one"], "relatedAlgorithms": ["extended-gcd", "crt", "combination"]
+  },
+  {
+    "slug": "prime-factorization", "title": "Prime Factorization", "category": "Number Theory", "difficulty": "Beginner",
+    "shortDescription": "Decompose an integer into prime powers using trial division.",
+    "intuition": "After removing every factor up to √n, any remaining value is prime.",
+    "derivation": "A composite number has at least one factor no larger than its square root. Repeated division records each exponent.",
+    "timeComplexity": "O(√n)", "spaceComplexity": "O(log n)", "languages": ["cpp", "python"], "visualization": true, "benchmark": true,
+    "tags": ["primes", "factors", "trial division"], "exampleInput": "360", "exampleOutput": "2^3 · 3^2 · 5", "edgeCases": ["n=1 has an empty factorization", "Input must be positive"], "relatedAlgorithms": ["eratosthenes-sieve", "euler-phi"]
+  },
+  {
+    "slug": "eratosthenes-sieve", "title": "Eratosthenes Sieve", "category": "Number Theory", "difficulty": "Beginner",
+    "shortDescription": "Enumerate primes by marking multiples of each discovered prime.",
+    "intuition": "A composite is eliminated by its smallest prime factor.",
+    "derivation": "Starting at p² is sufficient because smaller multiples already have a smaller prime factor.",
+    "timeComplexity": "O(n log log n)", "spaceComplexity": "O(n)", "languages": ["cpp", "python"], "visualization": true, "benchmark": true,
+    "tags": ["primes", "sieve", "precomputation"], "exampleInput": "20", "exampleOutput": "2 3 5 7 11 13 17 19", "edgeCases": ["n<2 returns no primes", "Memory grows linearly"], "relatedAlgorithms": ["euler-linear-sieve", "prime-factorization"]
+  },
+  {
+    "slug": "euler-linear-sieve", "title": "Euler Linear Sieve", "category": "Number Theory", "difficulty": "Intermediate",
+    "shortDescription": "Generate primes while marking every composite exactly once by its smallest prime factor.",
+    "intuition": "Stop multiplying when the current prime divides i, preserving a unique representation.",
+    "derivation": "Every composite x has a unique pair (i,p) in the loop where p is its smallest prime factor and x=i·p.",
+    "timeComplexity": "O(n)", "spaceComplexity": "O(n)", "languages": ["cpp", "python"], "visualization": true, "benchmark": true,
+    "tags": ["primes", "linear sieve", "smallest prime factor"], "exampleInput": "20", "exampleOutput": "2 3 5 7 11 13 17 19", "edgeCases": ["n<2 returns no primes", "Stores a smallest-prime-factor table"], "relatedAlgorithms": ["eratosthenes-sieve", "euler-phi"]
+  },
+  {
+    "slug": "euler-phi", "title": "Euler Phi", "category": "Number Theory", "difficulty": "Intermediate",
+    "shortDescription": "Count integers in [1,n] that are coprime with n.",
+    "intuition": "For every distinct prime factor p, remove the one-in-p share divisible by p.",
+    "derivation": "Inclusion–exclusion over distinct prime divisors yields φ(n)=n∏(1−1/p).",
+    "timeComplexity": "O(√n)", "spaceComplexity": "O(1)", "languages": ["cpp", "python"], "visualization": true, "benchmark": true,
+    "tags": ["totient", "coprime", "multiplicative function"], "exampleInput": "36", "exampleOutput": "12", "edgeCases": ["φ(1)=1", "Input must be positive"], "relatedAlgorithms": ["prime-factorization", "modular-inverse"]
+  },
+  {
+    "slug": "combination", "title": "Combination C(n,k)", "category": "Number Theory", "difficulty": "Intermediate",
+    "shortDescription": "Compute binomial coefficients exactly with a one-dimensional Pascal recurrence.",
+    "intuition": "Each choice either includes the newest item or it does not.",
+    "derivation": "Pascal's identity C(n,k)=C(n−1,k−1)+C(n−1,k) leads to an in-place dynamic program updated right-to-left.",
+    "timeComplexity": "O(nk)", "spaceComplexity": "O(k)", "languages": ["cpp", "python"], "visualization": true, "benchmark": false,
+    "tags": ["combinatorics", "pascal", "dynamic programming"], "exampleInput": "8 3", "exampleOutput": "56", "edgeCases": ["k<0 or k>n returns 0", "C(n,0)=1"], "relatedAlgorithms": ["binary-exponentiation", "modular-inverse"]
+  },
+  {
+    "slug": "crt", "title": "Chinese Remainder Theorem", "category": "Number Theory", "difficulty": "Advanced",
+    "shortDescription": "Merge congruences, including compatible non-coprime moduli.",
+    "intuition": "Two modular progressions intersect only when their difference is divisible by the moduli's gcd.",
+    "derivation": "Solving m₁t ≡ a₂−a₁ (mod m₂) with extended GCD yields a merged residue modulo lcm(m₁,m₂).",
+    "timeComplexity": "O(k log M)", "spaceComplexity": "O(1)", "languages": ["cpp", "python"], "visualization": true, "benchmark": false,
+    "tags": ["congruence", "modulo", "number theory"], "exampleInput": "x≡2 mod 3; x≡3 mod 5", "exampleOutput": "x≡8 mod 15", "edgeCases": ["Incompatible systems have no solution", "Normalize negative residues"], "relatedAlgorithms": ["extended-gcd", "modular-inverse"]
+  },
+  {
+    "slug": "bfs", "title": "Breadth-First Search", "category": "Graph", "difficulty": "Beginner",
+    "shortDescription": "Traverse a graph layer by layer and find shortest paths in unweighted graphs.",
+    "intuition": "A queue finishes every vertex at distance d before any at d+1.",
+    "derivation": "When a vertex is first discovered, every shorter layer has already been processed, so its recorded distance is minimal.",
+    "timeComplexity": "O(V+E)", "spaceComplexity": "O(V)", "languages": ["cpp", "python"], "visualization": true, "benchmark": true,
+    "tags": ["graph", "queue", "shortest path"], "exampleInput": "0:1,2; 1:3; source=0", "exampleOutput": "0 1 2 3", "edgeCases": ["Disconnected vertices remain unvisited", "Validate the source index"], "relatedAlgorithms": ["dfs", "dijkstra"]
+  },
+  {
+    "slug": "dfs", "title": "Depth-First Search", "category": "Graph", "difficulty": "Beginner",
+    "shortDescription": "Traverse a graph by exploring each branch before backtracking.",
+    "intuition": "A stack remembers the frontier while exploration dives deeply.",
+    "derivation": "Marking on entry ensures each reachable vertex and edge is processed a bounded number of times.",
+    "timeComplexity": "O(V+E)", "spaceComplexity": "O(V)", "languages": ["cpp", "python"], "visualization": true, "benchmark": true,
+    "tags": ["graph", "stack", "traversal"], "exampleInput": "0:1,2; 1:3; source=0", "exampleOutput": "0 1 3 2", "edgeCases": ["Iterative traversal avoids recursion depth", "Neighbor order controls output order"], "relatedAlgorithms": ["bfs", "topological-sort"]
+  },
+  {
+    "slug": "dijkstra", "title": "Dijkstra", "category": "Graph", "difficulty": "Intermediate",
+    "shortDescription": "Find single-source shortest paths in a graph with non-negative edge weights.",
+    "intuition": "The unsettled vertex with the smallest tentative distance cannot later be improved by a non-negative detour.",
+    "derivation": "A min-priority queue greedily settles vertices; relaxation maintains the best known upper bound for each distance.",
+    "timeComplexity": "O((V+E) log V)", "spaceComplexity": "O(V+E)", "languages": ["cpp", "python"], "visualization": true, "benchmark": true,
+    "tags": ["graph", "priority queue", "shortest path"], "exampleInput": "0-1:4, 0-2:1, 2-1:2; source=0", "exampleOutput": "0 3 1", "edgeCases": ["Negative weights are rejected", "Unreachable distance is infinity"], "relatedAlgorithms": ["bfs", "topological-sort"]
+  },
+  {
+    "slug": "topological-sort", "title": "Topological Sort", "category": "Graph", "difficulty": "Intermediate",
+    "shortDescription": "Order a directed acyclic graph so every edge points forward.",
+    "intuition": "A zero-indegree vertex has no unmet prerequisite and can be emitted next.",
+    "derivation": "Kahn's algorithm repeatedly removes zero-indegree vertices; emitting fewer than V vertices proves a cycle remains.",
+    "timeComplexity": "O(V+E)", "spaceComplexity": "O(V)", "languages": ["cpp", "python"], "visualization": true, "benchmark": false,
+    "tags": ["dag", "indegree", "ordering"], "exampleInput": "0→2, 1→2, 2→3", "exampleOutput": "0 1 2 3", "edgeCases": ["Cycles have no topological order", "Multiple valid orders may exist"], "relatedAlgorithms": ["dfs", "bfs"]
+  },
+  {
+    "slug": "dsu", "title": "Disjoint Set Union", "category": "Data Structures", "difficulty": "Intermediate",
+    "shortDescription": "Maintain dynamic connectivity with path compression and union by size.",
+    "intuition": "Represent each component by a root and flatten paths during lookups.",
+    "derivation": "Union by size limits tree growth; path compression makes repeated finds nearly constant amortized time.",
+    "timeComplexity": "O(α(n)) amortized", "spaceComplexity": "O(n)", "languages": ["cpp", "python"], "visualization": true, "benchmark": true,
+    "tags": ["union find", "connectivity", "components"], "exampleInput": "n=5; union(0,1), union(1,2)", "exampleOutput": "connected(0,2)=true", "edgeCases": ["Indices must be in range", "Union within one component is a no-op"], "relatedAlgorithms": ["bfs", "dfs"]
+  },
+  {
+    "slug": "fenwick-tree", "title": "Fenwick Tree", "category": "Data Structures", "difficulty": "Intermediate",
+    "shortDescription": "Support point updates and prefix/range sums in logarithmic time.",
+    "intuition": "Each tree cell owns a block whose length is its least significant set bit.",
+    "derivation": "Adding lowbit moves to the next containing block; subtracting lowbit partitions a prefix into disjoint blocks.",
+    "timeComplexity": "O(log n) query/update", "spaceComplexity": "O(n)", "languages": ["cpp", "python"], "visualization": true, "benchmark": true,
+    "tags": ["binary indexed tree", "prefix sum", "range query"], "exampleInput": "[2,1,4,3]; sum(0..2)", "exampleOutput": "7", "edgeCases": ["Internal indexing is one-based", "Empty ranges return zero"], "relatedAlgorithms": ["segment-tree", "binary-search"]
+  },
+  {
+    "slug": "segment-tree", "title": "Segment Tree", "category": "Data Structures", "difficulty": "Advanced",
+    "shortDescription": "Maintain associative range aggregates under point updates.",
+    "intuition": "A balanced binary tree stores the answer for every recursively divided interval.",
+    "derivation": "A query decomposes an interval into O(log n) canonical nodes, and an update changes one root-to-leaf path.",
+    "timeComplexity": "O(log n) query/update", "spaceComplexity": "O(n)", "languages": ["cpp", "python"], "visualization": true, "benchmark": true,
+    "tags": ["range query", "tree", "aggregation"], "exampleInput": "[2,1,4,3]; sum(1..3)", "exampleOutput": "8", "edgeCases": ["Reject invalid ranges", "Identity value depends on operation"], "relatedAlgorithms": ["fenwick-tree", "binary-search"]
+  },
+  {
+    "slug": "binary-search", "title": "Binary Search", "category": "Fundamental", "difficulty": "Beginner",
+    "shortDescription": "Locate a target in sorted data by halving the search interval.",
+    "intuition": "One comparison eliminates half of the remaining candidates.",
+    "derivation": "The invariant keeps the target, if present, inside [lo,hi]; each iteration strictly shrinks that interval.",
+    "timeComplexity": "O(log n)", "spaceComplexity": "O(1)", "languages": ["cpp", "python"], "visualization": true, "benchmark": true,
+    "tags": ["search", "sorted array", "divide and conquer"], "exampleInput": "[1,3,5,7,9], target=7", "exampleOutput": "3", "edgeCases": ["Input must be sorted", "Duplicates may return any matching index"], "relatedAlgorithms": ["merge-sort", "quick-sort"]
+  },
+  {
+    "slug": "merge-sort", "title": "Merge Sort", "category": "Fundamental", "difficulty": "Beginner",
+    "shortDescription": "Sort by recursively ordering halves and merging them stably.",
+    "intuition": "Merging two sorted sequences only needs to compare their front elements.",
+    "derivation": "The recurrence T(n)=2T(n/2)+O(n) has O(log n) levels of O(n) merging work.",
+    "timeComplexity": "O(n log n)", "spaceComplexity": "O(n)", "languages": ["cpp", "python"], "visualization": true, "benchmark": true,
+    "tags": ["sorting", "stable", "divide and conquer"], "exampleInput": "[5,2,4,1,3]", "exampleOutput": "[1,2,3,4,5]", "edgeCases": ["Empty and singleton arrays are already sorted", "Stable when ties choose the left half"], "relatedAlgorithms": ["quick-sort", "binary-search"]
+  },
+  {
+    "slug": "quick-sort", "title": "Quick Sort", "category": "Fundamental", "difficulty": "Beginner",
+    "shortDescription": "Sort in place by partitioning around pivots.",
+    "intuition": "After partitioning, the pivot is final and the two sides can be solved independently.",
+    "derivation": "Balanced partitions yield logarithmic depth and O(n log n) work; consistently extreme pivots cause O(n²).",
+    "timeComplexity": "O(n log n) average", "spaceComplexity": "O(log n) average", "languages": ["cpp", "python"], "visualization": true, "benchmark": true,
+    "tags": ["sorting", "partition", "divide and conquer"], "exampleInput": "[5,2,4,1,3]", "exampleOutput": "[1,2,3,4,5]", "edgeCases": ["Worst-case partitions are quadratic", "Duplicates require careful partitioning"], "relatedAlgorithms": ["merge-sort", "binary-search"]
+  }
+]
